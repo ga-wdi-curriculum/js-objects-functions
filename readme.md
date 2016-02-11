@@ -20,169 +20,16 @@
 - Differentiate between referencing and invoking a function.
 - State the difference between a function's output and side effects.
 
-### What have you learned so far in Javascript?
+### Framing - What have you learned so far in Javascript?
 
 * Data Types
 * Data Collections
-* Conditionals
+* Conditionals (5 / 75)
 
-## Framing - What are objects? (5 / 15)
+**What’s a function?**
 
-```js
-var car = {
-  make: "Honda",
-  model: "Civic",
-  year: 1997
-}
-```
+### Functions
 
-Objects too are a complex data type - usually referred to as an *unordered* list (or dictionary/hash/map).
-* They are a collection of key-value pairs called properties.
-* The keys which we explicitly state when defining a property are analogous to our array indexes. They are how we access the associated value (more below).
-
-
-### Turn and Jot: Model WDI Student (5 / 45)
-
-You're goal is to pseudo-code an object literal:
-
-* In pairs, spend 2 minutes thinking about what attributes a WDI student should have (think of at least 5!).
-* Take 3 minutes to construct your object literal with appropriate key value pairs by drawing it on the table
-* **Bonus - One key value pair contains an array**
-
-### You DO: Interacting with Objects (10 / 35)
-
-#### Read through the below, and then complete the exercise with you partner
-
-#### Create
-
-We already saved a sample object to a `car` variable. We did this using **object literal notation**.
-
-```js
-var car = {
-  make: "Honda",
-  model: "Civic",
-  year: 1997
-
-  // NOTE: Keys with a "-" in their name must be surrounded by quotation marks.
-  "tire-type": "Goodyear"
-}
-```
-
-#### Read
-
-To access object properties, we use either dot (`.property`) or bracket (`["property"]`) notation.
-
-```js
-console.log( car.make );
-console.log( car["make"] );
-
-// NOTE: When accessing properties whose keys have a "-" in them, you must use bracket notation.
-console.log( car["tire-type"] );
-```
-
-#### Update
-
-To update an object property, we place it on the left side of an assignment statement.
-
-```js
-car.year = 2003
-```
-
-We can also create brand new properties for an object after it's initialized using this method.
-
-```js
-// Now our car has a smell property equal to "Leathery Boot". We did not initially declare this property.
-car.smell = "Leathery Boot"
-```
-
-#### Delete
-
-If you want to delete an object property entirely, use the `delete` keyword.
-* This deletes the whole key-value pair, not just the value.
-* You won't do this often.
-
-```js
-delete car.smell
-```
-
-### Exercise
-
-Create a variable named wdiStudent and assign it to an object literal.
-
-1. Give your student at least three properties.
-2. One must have a key that contains a hyphen.
-3. One must contain an array or object.
-4. Update two properties, one of which is the hyphenated.
-5. Give your student a new property using dot or bracket notation.
-6. Delete one attribute.
-
-#### Iterating
-
-Like arrays, you can use a loop to iterate through an object. Say we want to print out all of an object's keys...
-
-```js
-// Iterate through object keys
-for (attribute in car) {
-  console.log( attribute );
-}
-```
-> Knowing this, how could we go about getting all the values in an object?
-
-Javascript objects also have native methods that take care of this for us...
-```js
-// .keys()
-Object.keys( car );
-
-// .getOwnPropertyNames()
-Object.getOwnPropertyNames( car );
-```
-
-### Nested Collections (5 / 40)
-
-Object properties aren't limited to simple data types. We can also nest collections inside of collections.
-
-```js
-var car = {
-  make: "Honda",
-  model: "Civic",
-  year: 1997,
-
-  // An array within an object.
-  gears: ["Reverse", "Neutral", "1", "2", "3", "4"],
-
-  // An object within an object.
-  engine: {
-    horsepower: "6 horses",
-    pistons: 12,
-    fast: true,
-    furious: false
-  }
-}
-```
-
-In the above examples, how do we access...
-* "Neutral" (i.e., array value within an object).
-* "6 horses" (i.e., object value within an object).
-
-### Break (10 / 55)
-
-### You Do: Big Ol' Twitter Object (15 / 70)
-
-As this course continues you will encounter plenty of Javascript objects in the wild. Spend **10 minutes** on the following...
-* Follow the link below and answer the questions in bold.
-* Along with each answer, write down how we would access the property in question.
-* Let's do the first one together...
-
-[Twitter JSON Exercise](https://github.com/ga-dc/big_ole_twitter_object)
-
-## Functions
-
-### Intro (5 / 75)
-
-The content of an object isn't limited to properties. We can also give objects functionality in the form of **methods**.
-* Before we do that, however, we should review functions.
-
-What’s a function?
 * A reusable block of Javascript code.
 * Simply put, a function is a block of code that takes an input, process that input and then produces an output.
 * Fundamental component of Javascript.
@@ -192,13 +39,14 @@ What’s a function?
 
 Say we wanted the square of a number without using the above function. How would we do that?
 
-
 Benefits of functions
 * Reusability.
 * DRYness.
 * Naming convention (describes intent).
 
 ### Recognize the parts (10 / 85)
+
+**What are the components of a function?**
 
 #### Function Container
 
@@ -215,6 +63,7 @@ function multiply( num1, num2 ){
 
 }
 ```
+
 #### Output and Side Effects
 
 ```js
@@ -226,7 +75,7 @@ function multiply( num1, num2 ){
 * Output: return value.
 * Side Effects: e.g., print statements.
 
-Q. Does a function need an input, output and/or side effects to work?
+**Q**. Does a function need an input, output and/or side effects to work?
 ---
 
 > A. Short answer. No.  Note: There is always an output (undefined). Discuss.
@@ -262,6 +111,8 @@ var multiply = function ( num1, num2 ) {
   return num1 * num2;
 }
 ```
+
+<!-- TODO: Add an Exercise for JS -->
 
 #### Declarations vs. Expressions
 
@@ -317,6 +168,157 @@ function declare() {
 
 This is a neat feature, but can you think of a potential pitfall of "hoisting" too often?
 * Code organization and readability.
+
+## Break (10 mins)
+
+## Intro - What are objects? (5 / 15)
+<!-- intro to objects -->
+
+```js
+var car = {
+  make: "Honda",
+  model: "Civic",
+  year: 1997
+}
+```
+
+Objects too are a complex data type - usually referred to as an *unordered* list (or dictionary/hash/map).
+* They are a collection of key-value pairs called properties.
+* The keys which we explicitly state when defining a property are analogous to our array indexes. They are how we access the associated value (more below).
+
+### Turn and Jot: Model WDI Student (5 / 45)
+
+You're goal is to pseudo-code an object literal:
+
+* In pairs, spend 2 minutes thinking about what attributes a WDI student should have (think of at least 5!).
+* Take 3 minutes to construct your object literal with appropriate key value pairs by drawing it on the table
+* **Bonus - One key value pair contains an array**
+
+### You DO: Interacting with Objects (10 / 35)
+
+**Read through the below, and then complete the exercise with you partner**
+
+#### Create
+
+We already saved a sample object to a `car` variable. We did this using **object literal notation**.
+
+```js
+var car = {
+  make: "Honda",
+  model: "Civic",
+  year: 1997
+
+  // NOTE: Keys with a "-" in their name must be surrounded by quotation marks.
+  "tire-type": "Goodyear"
+}
+```
+
+#### Read
+
+To access object properties, we use either dot (`.property`) or bracket (`["property"]`) notation.
+
+```js
+console.log( car.make );
+console.log( car["make"] );
+
+// NOTE: When accessing properties whose keys have a "-" in them, you must use bracket notation.
+console.log( car["tire-type"] );
+```
+
+#### Update
+
+To update an object property, we place it on the left side of an assignment statement.
+
+```js
+car.year = 2003
+```
+
+We can also create brand new properties for an object after it's initialized using this method.
+
+```js
+// Now our car has a smell property equal to "Leathery Boot". We did not initially declare this property.
+car.smell = "Leathery Boot"
+```
+
+#### Delete
+
+If you want to delete an object property entirely, use the `delete` keyword.
+* This deletes the whole key-value pair, not just the value.
+* You won't do this often.
+
+```js
+delete car.smell
+```
+
+#### Iterating through an Object
+
+Like arrays, you can use a loop to iterate through an object. Say we want to print out all of an object's keys...
+
+```js
+// Iterate through object keys
+for (attribute in car) {
+  console.log( attribute );
+}
+```
+> Knowing this, how could we go about getting all the values in an object?
+
+Javascript objects also have native methods that take care of this for us...
+```js
+// .keys()
+Object.keys( car );
+```
+
+### Exercise
+
+Create a variable named `wdiStudent` and assign it to an object literal.
+
+1. Give your student at least three properties.
+2. One must have a key that contains a hyphen.
+3. One must contain an array or object.
+4. Update two properties, one of which is the hyphenated.
+5. Give your student a new property using dot or bracket notation.
+6. Delete one attribute.
+7. Iterate through and print out all of the student's key-value pairs.
+
+> [Solution](https://gist.github.com/nolds9/efdb0a320e7143f42e96)
+
+### Nested Collections (5 / 40)
+
+Object properties aren't limited to simple data types. We can also nest collections inside of collections.
+
+```js
+var car = {
+  make: "Honda",
+  model: "Civic",
+  year: 1997,
+
+  // An array within an object.
+  gears: ["Reverse", "Neutral", "1", "2", "3", "4"],
+
+  // An object within an object.
+  engine: {
+    horsepower: "6 horses",
+    pistons: 12,
+    fast: true,
+    furious: false
+  }
+}
+```
+
+**Q** In the above examples, how do we access...
+* "Neutral" (i.e., array value within an object)?
+* "6 horses" (i.e., object value within an object)?
+
+### Break (10 / 55)
+
+### You Do: Big Ol' Twitter Object (15 / 70)
+
+As this course continues you will encounter plenty of Javascript objects in the wild. Spend **10 minutes** on the following...
+* Follow the link below and answer the questions in bold.
+* Along with each answer, write down how we would access the property in question.
+* Let's do the first one together...
+
+[Twitter JSON Exercise](https://github.com/ga-dc/big_ole_twitter_object)
 
 ## Methods (15 / 125)
 
