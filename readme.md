@@ -41,7 +41,7 @@ Objects too are a complex data type - usually referred to as an *unordered* list
 * The keys which we explicitly state when defining a property are analogous to our array indexes. They are how we access the associated value (more below).
 
 
-### You Do: Model WDI Student (5 / 45)
+### Turn and Jot: Model WDI Student (5 / 45)
 
 You're goal is to pseudo-code an object literal:
 
@@ -49,7 +49,9 @@ You're goal is to pseudo-code an object literal:
 * Take 3 minutes to construct your object literal with appropriate key value pairs by drawing it on the table
 * **Bonus - One key value pair contains an array**
 
-### Interacting with Objects (10 / 35)
+### You DO: Interacting with Objects (10 / 35)
+
+#### Read through the below, and then complete the exercise with you partner
 
 #### Create
 
@@ -102,6 +104,17 @@ If you want to delete an object property entirely, use the `delete` keyword.
 ```js
 delete car.smell
 ```
+
+### Exercise
+
+Create a variable named wdiStudent and assign it to an object literal.
+
+1. Give your student at least three properties.
+2. One must have a key that contains a hyphen.
+3. One must contain an array or object.
+4. Update two properties, one of which is the hyphenated.
+5. Give your student a new property using dot or bracket notation.
+6. Delete one attribute.
 
 #### Iterating
 
