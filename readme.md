@@ -26,15 +26,7 @@
 * Data Collections
 * Conditionals
 
-## Arrays Review (5 / 10)
-
-Arrays are a complex data type - usually referred to as an ordered list.
-
-**How do we retrieve elements from an array?**
-
-Using an index.
-
-## Objects (5 / 15)
+## Framing - What are objects? (5 / 15)
 
 ```js
 var car = {
@@ -49,15 +41,13 @@ Objects too are a complex data type - usually referred to as an *unordered* list
 * The keys which we explicitly state when defining a property are analogous to our array indexes. They are how we access the associated value (more below).
 
 
-### Turn and Talk: Real-Life Data Collections (10 / 25)
+### You Do: Model WDI Student (5 / 45)
 
-Would you reorganize the below real-life examples into an array, object or both? Spend **5 minutes** discussing them with a partner.
+You're goal is to pseudo-code an object literal:
 
-1. Books in a Library
-2. Menu items at a fast food restaurant
-3. Definitions in a dictionary
-4. List of students in WDI
-5. List of all GA courses ordered by city
+* In pairs, spend 2 minutes thinking about what attributes a WDI student should have (think of at least 5!).
+* Take 3 minutes to construct your object literal with appropriate key value pairs by drawing it on the table
+**Bonus - One key value pair contains an array**
 
 ### Interacting with Objects (10 / 35)
 
@@ -161,17 +151,6 @@ In the above examples, how do we access...
 * "Neutral" (i.e., array value within an object).
 * "6 horses" (i.e., object value within an object).
 
-### You Do: Model WDI Student (5 / 45)
-
-Create a variable named `wdiStudent` and assign it to an object literal.
-* Give your student at least three properties.
-  * One must have a key that contains a hyphen.
-  * One must contain an array or object.
-* Update two properties, one of which is the hyphenated.
-* Give your student a new property using dot or bracket notation.
-* Delete one attribute.
-* Iterate through and print out all of the student's key-value pairs.
-
 ### Break (10 / 55)
 
 ### You Do: Big Ol' Twitter Object (15 / 70)
@@ -195,6 +174,16 @@ What’s a function?
 * Simply put, a function is a block of code that takes an input, process that input and then produces an output.
 * Fundamental component of Javascript.
 * Analogy: Quizno's Oven
+
+### Why do we use functions? (5 / 95)
+
+Say we wanted the square of a number without using the above function. How would we do that?
+
+
+Benefits of functions
+* Reusability.
+* DRYness.
+* Naming convention (describes intent).
 
 ### Recognize the parts (10 / 85)
 
@@ -240,16 +229,6 @@ multiply( 2, 5 );
 // What happens if we reference the function without parentheses?
 multiply;
 ```
-
-### Why do we use functions? (5 / 95)
-
-Say we wanted the square of a number without using the above function. How would we do that?
-
-
-Benefits of functions
-* Reusability.
-* DRYness.
-* Naming convention (describes intent).
 
 ### Function Declarations and Expressions (5 / 100)
 
