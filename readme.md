@@ -47,7 +47,7 @@ You're goal is to pseudo-code an object literal:
 
 * In pairs, spend 2 minutes thinking about what attributes a WDI student should have (think of at least 5!).
 * Take 3 minutes to construct your object literal with appropriate key value pairs by drawing it on the table
-**Bonus - One key value pair contains an array**
+* **Bonus - One key value pair contains an array**
 
 ### Interacting with Objects (10 / 35)
 
