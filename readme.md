@@ -2,6 +2,14 @@
 
 ## Learning Objectives (5 / 5)
 
+### Functions
+- Describe what a JavaScript function is.
+- Recognize the parts of a function.
+- Write a function in JavaScript using a declaration and an expression.
+- Define hoisting.
+- Differentiate between referencing and invoking a function.
+- State the difference between a function's output and side effects.
+
 ### Objects
 - Compare objects and key-value stores to arrays as data structures.
 - Explain the difference between object properties and methods.
@@ -11,14 +19,6 @@
 - Iterate over the keys of an object to return and manipulate values.
 - Explain nested data structures.
 - Write an object method.
-
-### Functions
-- Describe what a JavaScript function is.
-- Recognize the parts of a function.
-- Write a function in JavaScript using a declaration and an expression.
-- Define hoisting.
-- Differentiate between referencing and invoking a function.
-- State the difference between a function's output and side effects.
 
 ### Framing - What have you learned so far in Javascript?
 
