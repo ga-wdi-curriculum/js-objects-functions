@@ -1,6 +1,6 @@
 # Objects and Functions
 
-## Learning Objectives (5 / 5)
+## Learning Objectives
 
 ### Functions
 - Describe what a JavaScript function is.
@@ -18,22 +18,25 @@
 - Explain the difference between object properties and methods.
 - Write an object method.
 
-### Framing - What have you learned so far in Javascript?
+### Framing (15 / 15)
+**What have you learned so far in Javascript?**
 
 * Data Types
 * Data Collections
-* Conditionals (5 / 75)
+* Conditionals
+
+## Functions
 
 **What’s a function?**
-
-### Functions
 
 * A reusable block of Javascript code.
 * Simply put, a function is a block of code that takes an input, process that input and then produces an output.
 * Fundamental component of Javascript.
 * Analogy: Quizno's Oven
 
-### Why do we use functions? (5 / 95)
+**Q. Think back to what we have covered so far, when have you used functions before?**
+
+### Why do we use functions?
 
 Say we wanted the square of a number without using the above function. How would we do that?
 
@@ -42,7 +45,7 @@ Benefits of functions
 * DRYness.
 * Naming convention (describes intent).
 
-### Recognize the parts (10 / 85)
+### Recognize the parts (10 / 25)
 
 **What are the components of a function?**
 
@@ -78,7 +81,7 @@ function multiply( num1, num2 ){
 
 > A. Short answer. No.  Note: There is always an output (undefined). Discuss.
 
-#### Calling and Referencing a Function (5 / 90)
+#### Calling and Referencing a Function
 
 We've defined a function. Now we need to call it...
 
@@ -90,7 +93,7 @@ multiply( 2, 5 );
 multiply;
 ```
 
-### Function Declarations and Expressions (5 / 100)
+### Function Declarations and Expressions (10 / 35)
 
 There are two ways to define or declare a function...
 
@@ -110,8 +113,6 @@ var multiply = function ( num1, num2 ) {
 }
 ```
 
-<!-- TODO: Add an Exercise for JS -->
-
 #### Declarations vs. Expressions
 
 Both do the same thing and run the same chunk of code. But they are different.
@@ -126,7 +127,7 @@ While we call/reference functions defined through declarations and expressions t
 > Declarations are processed before any code is executed, meaning you can call functions before they are declared. This behavior is known as **hoisting**.
 
 
-### Hoisting (10 / 110)
+### Hoisting (10 / 45)
 
 What do you think will happen when we run the below code...
 ```js
@@ -167,10 +168,13 @@ function declare() {
 This is a neat feature, but can you think of a potential pitfall of "hoisting" too often?
 * Code organization and readability.
 
-## Break (10 mins)
+**Hungry for More?**
 
-## Intro - What are objects? (5 / 15)
-<!-- intro to objects -->
+> Grab a Snickers || Try implementing [fizzBuzz](https://github.com/ga-wdi-exercises/fizzBuzz_redux) in the console with Functions!
+
+## Break (10 / 55)
+
+## Intro to Objects (5 / 60)
 
 ```js
 var car = {
@@ -180,11 +184,11 @@ var car = {
 }
 ```
 
-Objects too are a complex data type - usually referred to as an *unordered* list (or dictionary/hash/map).
+Objects are a complex data type - usually referred to as an *unordered* list (or dictionary/hash/map).
 * They are a collection of key-value pairs called properties.
 * The keys which we explicitly state when defining a property are analogous to our array indexes. They are how we access the associated value (more below).
 
-### Turn and Jot: Model WDI Student (5 / 45)
+### Turn and Jot: Model WDI Student (5 / 65)
 
 You're goal is to pseudo-code an object literal:
 
@@ -192,9 +196,9 @@ You're goal is to pseudo-code an object literal:
 * Take 3 minutes to construct your object literal with appropriate key value pairs by drawing it on the table
 * **Bonus - One key value pair contains an array**
 
-### You DO: Interacting with Objects (10 / 35)
+### You DO: Interacting with Objects (30 / 95)
 
-**Read through the below, and then complete the exercise with you partner**
+**Read through the below, and then complete the exercise with your partner**
 
 #### Create
 
@@ -278,9 +282,11 @@ Create a variable named `wdiStudent` and assign it to an object literal.
 6. Delete one attribute.
 7. Iterate through and print out all of the student's key-value pairs.
 
+**Bonus:** Write a function that returns your `wdiStudent` object
+
 > [Solution](https://gist.github.com/nolds9/efdb0a320e7143f42e96)
 
-### Nested Collections (5 / 40)
+### Nested Collections (5 / 100)
 
 Object properties aren't limited to simple data types. We can also nest collections inside of collections.
 
@@ -307,9 +313,9 @@ var car = {
 * "Neutral" (i.e., array value within an object)?
 * "6 horses" (i.e., object value within an object)?
 
-### Break (10 / 55)
+### Break (10 / 110)
 
-### You Do: Big Ol' Twitter Object (15 / 70)
+### You Do: Big Ol' Twitter Object (15 / 125)
 
 As this course continues you will encounter plenty of Javascript objects in the wild. Spend **10 minutes** on the following...
 * Follow the link below and answer the questions in bold.
@@ -318,7 +324,7 @@ As this course continues you will encounter plenty of Javascript objects in the 
 
 [Twitter JSON Exercise](https://github.com/ga-dc/big_ole_twitter_object)
 
-## Methods (15 / 125)
+## Methods (15 / 140)
 
 Methods are functions that are attached to some object.
 
@@ -349,14 +355,23 @@ With methods as part of our Javascript toolbox, we now have a cool interface wit
 
 We've only scratched the surface for objects. We're going to dive much deeper into them later on in the course.
 
-## Exercise + Homework: Calculator (15 / 140)
+
+## Closing, Q&A, Review LO's (10 / 150)
+
+1. Does a function need an input, output, and side-effect to work?
+2. What's difference between calling and referencing a function?
+3. What's difference between function expressions and declarations?
+4. How are objects like dictionaries?
+5. What's difference between a property and a method?
+
+##Homework: Calculator
 
 [Javascript Calculator](https://github.com/ga-dc/js-calculator)
 
-## Closing, Q&A (10 / 150)
-
----
-
-## Further Reading
+## Further Reading / Resources
 
 * [Javascript Scoping and Hoisting](http://www.adequatelygood.com/JavaScript-Scoping-and-Hoisting.html)
+* [The Secret Life of JS Objects](http://eloquentjavascript.net/06_object.html)
+* [Secrets of the Javascript Ninja](http://webandbeer.com.ar/wp-content/uploads/2014/11/SecretsOfTheJavaScriptNinja.pdf)
+* [JS for Cats](http://jsforcats.com/)
+* [CoderByte Challenges](https://coderbyte.com/challenges/)
