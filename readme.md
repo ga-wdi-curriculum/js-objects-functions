@@ -1,5 +1,7 @@
 # Objects and Functions
 
+[![Build Status](https://travis-ci.org/ga-wdi-lessons/js-objects-functions.svg?branch=master)](https://travis-ci.org/ga-wdi-lessons/js-objects-functions)
+
 ## Learning Objectives
 
 ### Functions
