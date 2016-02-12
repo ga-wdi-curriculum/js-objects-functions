@@ -6,18 +6,16 @@
 - Describe what a JavaScript function is.
 - Recognize the parts of a function.
 - Write a function in JavaScript using a declaration and an expression.
-- Define hoisting.
-- Differentiate between referencing and invoking a function.
 - State the difference between a function's output and side effects.
+- Differentiate between referencing and invoking a function.
+- Define hoisting.
 
 ### Objects
 - Compare objects and key-value stores to arrays as data structures.
-- Explain the difference between object properties and methods.
 - Create objects using object literal syntax.
-- Compare adding and retrieving properties to objects using dot and bracket notation.
-- Use `delete`.
-- Iterate over the keys of an object to return and manipulate values.
+- Practice interacting with properties of literal objects.
 - Explain nested data structures.
+- Explain the difference between object properties and methods.
 - Write an object method.
 
 ### Framing - What have you learned so far in Javascript?
