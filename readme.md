@@ -24,8 +24,8 @@
 **What have you learned so far in Javascript?**
 
 * Data Types
-* Data Collections
 * Conditionals
+* Data Collections
 
 ## Functions
 
