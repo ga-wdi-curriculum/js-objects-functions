@@ -31,16 +31,17 @@
 
 **What’s a function?**
 
+* Fundamental component of Javascript.
 * A reusable block of Javascript code.
 * Simply put, a function is a block of code that takes an input, process that input and then produces an output.
-* Fundamental component of Javascript.
 * Analogy: Quizno's Oven
 
 **Q. Think back to what we have covered so far, when have you used functions before?**
 
 ### Why do we use functions?
-
+<!--
 Say we wanted the square of a number without using the above function. How would we do that?
+-->
 
 Benefits of functions
 * Reusability.
@@ -147,7 +148,7 @@ function multiply( num1, num2 ) {               // NOTE: This is a function decl
   return num1 * num2;
 }
 ```
-> We can successfully call the square function before declaring it. When our script file loads, it essentially processes all function declarations first, and then runs the rest of our Javascript from top to bottom.
+> We can successfully call the multiply function before declaring it. When our script file loads, it essentially processes all function declarations first, and then runs the rest of our Javascript from top to bottom.
 
 Knowing this, what will happen each time we call `express` and `declare` in the below example?
 
@@ -159,8 +160,8 @@ var express = function() {
     console.log('Function expression called.');
 };
 
-express();        // ???
 declare();        // ???
+express();        // ???
 
 function declare() {
     console.log('Function declaration called.');
@@ -343,6 +344,10 @@ var car = {
   // Methods can take arguments
   gps: function( location ){
     console.log( "Beep boop, driving to " + location );
+  },
+  paint: function( newColor ){
+    console.log( "Your car has been painted " + newColor );
+    car.color = newColor;
   }
 }
 
