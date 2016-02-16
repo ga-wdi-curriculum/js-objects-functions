@@ -39,9 +39,8 @@
 **Q. Think back to what we have covered so far, when have you used functions before?**
 
 ### Why do we use functions?
-<!--
-Say we wanted the square of a number without using the above function. How would we do that?
--->
+
+> Say we wanted the product of two numbers? How would we do that with a function?
 
 Benefits of functions
 * Reusability.
@@ -88,6 +87,8 @@ function multiply( num1, num2 ){
 
 We've defined a function. Now we need to call it...
 
+**Q. Now we that we have stored that function in memory, how to do we use it?**
+
 ```js
 // Call the multiply function.
 multiply( 2, 5 );
@@ -119,7 +120,8 @@ var multiply = function ( num1, num2 ) {
 #### Declarations vs. Expressions
 
 Both do the same thing and run the same chunk of code. But they are different.
-* What differences do you notice?
+
+- **Q. What differences do you notice?**
 
 **Function declarations** define functions without assigning them to variables.
 
@@ -127,7 +129,7 @@ Both do the same thing and run the same chunk of code. But they are different.
 
 While we call/reference functions defined through declarations and expressions the same way, they do have a subtle but important difference...
 
-> Declarations are processed before any code is executed, meaning you can call functions before they are declared. This behavior is known as **hoisting**.
+> **Note**: Declarations are processed before any code is executed, meaning you can call functions before they are declared. This behavior is known as **hoisting**.
 
 
 ### Hoisting (10 / 45)
@@ -168,7 +170,8 @@ function declare() {
 }
 ```
 
-This is a neat feature, but can you think of a potential pitfall of "hoisting" too often?
+**Q. This is a neat feature, but can you think of a potential pitfall of "hoisting" too often?**
+
 * Code organization and readability.
 
 **Hungry for More?**
@@ -178,6 +181,8 @@ This is a neat feature, but can you think of a potential pitfall of "hoisting" t
 ## Break (10 / 55)
 
 ## Intro to Objects (5 / 60)
+
+In JavaScript, Objects are arbitrary collections of properties; we can add or remove these properties as we please. One way to create an object is by using a curly brace notation.
 
 ```js
 var car = {
@@ -225,6 +230,9 @@ To access object properties, we use either dot (`.property`) or bracket (`["prop
 ```js
 console.log( car.make );
 console.log( car["make"] );
+
+// What happens when we try to access a property yet to be defined?
+console.log( car.owner )
 
 // NOTE: When accessing properties whose keys have a "-" in them, you must use bracket notation.
 console.log( car["tire-type"] );
@@ -362,6 +370,7 @@ With methods as part of our Javascript toolbox, we now have a cool interface wit
 
 We've only scratched the surface for objects. We're going to dive much deeper into them later on in the course.
 
+> If you're looking for a sneak peak into the power of objects and functions, we recommend reading [The Secret Life of JS Objects](http://eloquentjavascript.net/06_object.html) chapter in Eloquent JS
 
 ## Closing, Q&A, Review LO's (10 / 150)
 
