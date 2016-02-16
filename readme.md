@@ -33,7 +33,7 @@
 
 * Fundamental component of Javascript.
 * A reusable block of Javascript code.
-* Simply put, a function is a block of code that takes an input, process that input and then produces an output.
+* Simply put, a function is a block of code that takes an input, processes that input and then produces an output.
 * Analogy: Quizno's Oven
 
 **Q. Think back to what we have covered so far, when have you used functions before?**
@@ -132,7 +132,7 @@ While we call/reference functions defined through declarations and expressions t
 > **Note**: Declarations are processed before any code is executed, meaning you can call functions before they are declared. This behavior is known as **hoisting**.
 
 
-### Hoisting (10 / 40
+### Hoisting (10 / 40)
 
 What do you think will happen when we run the below code...
 ```js
@@ -181,7 +181,7 @@ function declare() {
 
 * Code organization and readability.
 
-## Exercise: Fun with Functions Quiz ( 5 / 45 )
+## Exercise: Fun with Functions Quiz (5 / 45)
 
 What is alerted in each case? Write down your answer before running the code.
 
@@ -268,7 +268,7 @@ We already saved a sample object to a `car` variable. We did this using **object
 var car = {
   make: "Honda",
   model: "Civic",
-  year: 1997
+  year: 1997,
 
   // NOTE: Keys with a "-" in their name must be surrounded by quotation marks.
   "tire-type": "Goodyear"
