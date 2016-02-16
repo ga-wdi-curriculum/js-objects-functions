@@ -1,40 +1,240 @@
 # Objects and Functions
 
-## Learning Objectives (5 / 5)
+[![Build Status](https://travis-ci.org/ga-wdi-lessons/js-objects-functions.svg?branch=master)](https://travis-ci.org/ga-wdi-lessons/js-objects-functions)
 
-### Objects
-- Compare objects and key-value stores to arrays as data structures.
-- Explain the difference between object properties and methods.
-- Create objects using object literal syntax.
-- Compare adding and retrieving properties to objects using dot and bracket notation.
-- Use `delete`.
-- Iterate over the keys of an object to return and manipulate values.
-- Explain nested data structures.
-- Write an object method.
+## Learning Objectives
 
 ### Functions
 - Describe what a JavaScript function is.
 - Recognize the parts of a function.
 - Write a function in JavaScript using a declaration and an expression.
-- Define hoisting.
-- Differentiate between referencing and invoking a function.
 - State the difference between a function's output and side effects.
+- Differentiate between referencing and invoking a function.
+- Define hoisting.
 
-### What have you learned so far in Javascript?
+### Objects
+- Compare objects and key-value stores to arrays as data structures.
+- Create objects using object literal syntax.
+- Practice interacting with properties of literal objects.
+- Explain nested data structures.
+- Explain the difference between object properties and methods.
+- Write an object method.
+
+### Framing (10 / 10)
+**What have you learned so far in Javascript?**
 
 * Data Types
-* Data Collections
 * Conditionals
+* Data Collections
 
-## Arrays Review (5 / 10)
+## Functions
 
-Arrays are a complex data type - usually referred to as an ordered list.
+**What’s a function?**
 
-**How do we retrieve elements from an array?**
+* Fundamental component of Javascript.
+* A reusable block of Javascript code.
+* Simply put, a function is a block of code that takes an input, processes that input and then produces an output.
+* Analogy: Quizno's Oven
 
-Using an index.
+**Q. Think back to what we have covered so far, when have you used functions before?**
 
-## Objects (5 / 15)
+### Why do we use functions?
+
+> Say we wanted the product of two numbers? How would we do that with a function?
+
+Benefits of functions
+* Reusability.
+* DRYness.
+* Naming convention (describes intent).
+
+### Recognize the parts (10 / 20)
+
+**What are the components of a function?**
+
+#### Function Container
+
+```js
+function multiply(){
+
+}
+```
+
+#### Input ("Arguments" or "Parameters")
+
+```js
+function multiply( num1, num2 ){
+
+}
+```
+
+#### Output and Side Effects
+
+```js
+function multiply( num1, num2 ){
+  console.log( num1 * num2 );
+  return num1 * num2;
+}
+```
+* Output: return value.
+* Side Effects: e.g., print statements.
+
+**Q**. Does a function need an input, output and/or side effects to work?
+---
+
+> A. Short answer. No.  Note: There is always an output (undefined). Discuss.
+
+#### Calling and Referencing a Function
+
+We've defined a function. Now we need to call it...
+
+**Q. Now we that we have stored that function in memory, how to do we use it?**
+
+```js
+// Call the multiply function.
+multiply( 2, 5 );
+
+// What happens if we reference the function without parentheses?
+multiply;
+```
+
+### Function Declarations and Expressions (10 / 30)
+
+There are two ways to define or declare a function...
+
+#### Declaration
+
+``` javascript
+function multiply( num1, num2 ) {
+  return num1 * num2;
+}
+```
+
+#### Expression
+
+``` javascript
+var multiply = function ( num1, num2 ) {
+  return num1 * num2;
+}
+```
+
+#### Declarations vs. Expressions
+
+Both do the same thing and run the same chunk of code. But they are different.
+
+- **Q. What differences do you notice?**
+
+**Function declarations** define functions without assigning them to variables.
+
+**Function expressions** save anonymous functions to variables.
+
+While we call/reference functions defined through declarations and expressions the same way, they do have a subtle but important difference...
+
+> **Note**: Declarations are processed before any code is executed, meaning you can call functions before they are declared. This behavior is known as **hoisting**.
+
+
+### Hoisting (10 / 40)
+
+What do you think will happen when we run the below code...
+```js
+multiply( 3, 5 );
+var multiply = function( num1, num2 ){           // NOTE: This is a function expression
+  return num1 * num2;
+}
+```
+
+Surely the same thing will happen when we run the below code...
+
+```js
+multiply( 3, 5 );
+function multiply( num1, num2 ) {               // NOTE: This is a function declaration
+  return num1 * num2;
+}
+```
+> We can successfully call the multiply function before declaring it. When our script file loads, it essentially processes all function declarations first, and then runs the rest of our Javascript from top to bottom.
+
+Knowing this, what will happen each time we call `express` and `declare` in the below example?
+
+```js
+express();        // What happens when we run this function at this point in the code?
+
+var express = function() {
+    console.log('Function expression called.');
+};
+```
+
+What changes when we run?
+
+```js
+var express = function() {
+    console.log('Function expression called.');
+};
+
+declare();        // ???
+express();        // ???
+
+function declare() {
+    console.log('Function declaration called.');
+}
+```
+
+**Q. This is a neat feature, but can you think of a potential pitfall of "hoisting" too often?**
+
+* Code organization and readability.
+
+## Exercise: Fun with Functions Quiz (5 / 45)
+
+What is alerted in each case? Write down your answer before running the code.
+
+1.
+```js
+function foo(){
+    function bar() {
+        return 3;
+
+    return bar();
+    function bar() {
+        return 8;
+    }
+}
+alert(foo());
+```
+2.
+```js
+function foo(){
+    var bar = function() {
+        return 3;
+    };
+    return bar();
+    var bar = function() {
+        return 8;
+    };
+}
+alert(foo());
+```
+
+3.
+```js
+function foo(){
+    return bar();
+    var bar = function() {
+        return 3;
+    };
+    var bar = function() {
+        return 8;
+    };
+}
+alert(foo());
+```
+
+**Hungry for More?**
+
+> Grab a Snickers || Try implementing [fizzBuzz](https://github.com/ga-wdi-exercises/fizzBuzz_redux) in the console with Functions!
+
+## Break (10 / 55)
+
+## Intro to Objects (5 / 60)
+
+In JavaScript, Objects are arbitrary collections of properties; we can add or remove these properties as we please. One way to create an object is by using a curly brace notation.
 
 ```js
 var car = {
@@ -44,22 +244,21 @@ var car = {
 }
 ```
 
-Objects too are a complex data type - usually referred to as an *unordered* list (or dictionary/hash/map).
+Objects are a complex data type - usually referred to as an *unordered* list (or dictionary/hash/map).
 * They are a collection of key-value pairs called properties.
 * The keys which we explicitly state when defining a property are analogous to our array indexes. They are how we access the associated value (more below).
 
+### Turn and Jot: Model WDI Student (5 / 65)
 
-### Turn and Talk: Real-Life Data Collections (10 / 25)
+You're goal is to pseudo-code an object literal:
 
-Would you reorganize the below real-life examples into an array, object or both? Spend **5 minutes** discussing them with a partner.
+* In pairs, spend 2 minutes thinking about what attributes a WDI student should have (think of at least 5!).
+* Take 3 minutes to construct your object literal with appropriate key value pairs by drawing it on the table
+* **Bonus - One key value pair contains an array**
 
-1. Books in a Library
-2. Menu items at a fast food restaurant
-3. Definitions in a dictionary
-4. List of students in WDI
-5. List of all GA courses ordered by city
+### You DO: Interacting with Objects (30 / 95)
 
-### Interacting with Objects (10 / 35)
+**Read through the below, and then complete the exercise with your partner**
 
 #### Create
 
@@ -69,7 +268,7 @@ We already saved a sample object to a `car` variable. We did this using **object
 var car = {
   make: "Honda",
   model: "Civic",
-  year: 1997
+  year: 1997,
 
   // NOTE: Keys with a "-" in their name must be surrounded by quotation marks.
   "tire-type": "Goodyear"
@@ -83,6 +282,9 @@ To access object properties, we use either dot (`.property`) or bracket (`["prop
 ```js
 console.log( car.make );
 console.log( car["make"] );
+
+// What happens when we try to access a property yet to be defined?
+console.log( car.owner )
 
 // NOTE: When accessing properties whose keys have a "-" in them, you must use bracket notation.
 console.log( car["tire-type"] );
@@ -113,7 +315,7 @@ If you want to delete an object property entirely, use the `delete` keyword.
 delete car.smell
 ```
 
-#### Iterating
+#### Iterating through an Object
 
 Like arrays, you can use a loop to iterate through an object. Say we want to print out all of an object's keys...
 
@@ -129,12 +331,25 @@ Javascript objects also have native methods that take care of this for us...
 ```js
 // .keys()
 Object.keys( car );
-
-// .getOwnPropertyNames()
-Object.getOwnPropertyNames( car );
 ```
 
-### Nested Collections (5 / 40)
+### Exercise
+
+Create a variable named `wdiStudent` and assign it to an object literal.
+
+1. Give your student at least three properties.
+2. One must have a key that contains a hyphen.
+3. One must contain an array or object.
+4. Update two properties, one of which is the hyphenated.
+5. Give your student a new property using dot or bracket notation.
+6. Delete one attribute.
+7. Iterate through and print out all of the student's key-value pairs.
+
+**Bonus:** Write a function that returns your `wdiStudent` object
+
+> [Solution](https://gist.github.com/nolds9/efdb0a320e7143f42e96)
+
+### Nested Collections (5 / 100)
 
 Object properties aren't limited to simple data types. We can also nest collections inside of collections.
 
@@ -157,24 +372,13 @@ var car = {
 }
 ```
 
-In the above examples, how do we access...
-* "Neutral" (i.e., array value within an object).
-* "6 horses" (i.e., object value within an object).
+**Q** In the above examples, how do we access...
+* "Neutral" (i.e., array value within an object)?
+* "6 horses" (i.e., object value within an object)?
 
-### You Do: Model WDI Student (5 / 45)
+### Break (10 / 110)
 
-Create a variable named `wdiStudent` and assign it to an object literal.
-* Give your student at least three properties.
-  * One must have a key that contains a hyphen.
-  * One must contain an array or object.
-* Update two properties, one of which is the hyphenated.
-* Give your student a new property using dot or bracket notation.
-* Delete one attribute.
-* Iterate through and print out all of the student's key-value pairs.
-
-### Break (10 / 55)
-
-### You Do: Big Ol' Twitter Object (15 / 70)
+### You Do: Big Ol' Twitter Object (15 / 125)
 
 As this course continues you will encounter plenty of Javascript objects in the wild. Spend **10 minutes** on the following...
 * Follow the link below and answer the questions in bold.
@@ -183,150 +387,7 @@ As this course continues you will encounter plenty of Javascript objects in the 
 
 [Twitter JSON Exercise](https://github.com/ga-dc/big_ole_twitter_object)
 
-## Functions
-
-### Intro (5 / 75)
-
-The content of an object isn't limited to properties. We can also give objects functionality in the form of **methods**.
-* Before we do that, however, we should review functions.
-
-What’s a function?
-* A reusable block of Javascript code.
-* Simply put, a function is a block of code that takes an input, process that input and then produces an output.
-* Fundamental component of Javascript.
-* Analogy: Quizno's Oven
-
-### Recognize the parts (10 / 85)
-
-#### Function Container
-
-```js
-function multiply(){
-
-}
-```
-
-#### Input ("Arguments" or "Parameters")
-
-```js
-function multiply( num1, num2 ){
-
-}
-```
-#### Output and Side Effects
-
-```js
-function multiply( num1, num2 ){
-  console.log( num1 * num2 );
-  return num1 * num2;
-}
-```
-* Output: return value.
-* Side Effects: e.g., print statements.
-
-Q. Does a function need an input, output and/or side effects to work?
----
-
-> A. Short answer. No.  Note: There is always an output (undefined). Discuss.
-
-#### Calling and Referencing a Function (5 / 90)
-
-We've defined a function. Now we need to call it...
-
-```js
-// Call the multiply function.
-multiply( 2, 5 );
-
-// What happens if we reference the function without parentheses?
-multiply;
-```
-
-### Why do we use functions? (5 / 95)
-
-Say we wanted the square of a number without using the above function. How would we do that?
-
-
-Benefits of functions
-* Reusability.
-* DRYness.
-* Naming convention (describes intent).
-
-### Function Declarations and Expressions (5 / 100)
-
-There are two ways to define or declare a function...
-
-#### Declaration
-
-``` javascript
-function multiply( num1, num2 ) {
-  return num1 * num2;
-}
-```
-
-#### Expression
-
-``` javascript
-var multiply = function ( num1, num2 ) {
-  return num1 * num2;
-}
-```
-
-#### Declarations vs. Expressions
-
-Both do the same thing and run the same chunk of code. But they are different.
-* What differences do you notice?
-
-**Function declarations** define functions without assigning them to variables.
-
-**Function expressions** save anonymous functions to variables.
-
-While we call/reference functions defined through declarations and expressions the same way, they do have a subtle but important difference...
-
-> Declarations are processed before any code is executed, meaning you can call functions before they are declared. This behavior is known as **hoisting**.
-
-
-### Hoisting (10 / 110)
-
-What do you think will happen when we run the below code...
-```js
-multiply( 3, 5 );
-var multiply = function( num1, num2 ){           // NOTE: This is a function expression
-  return num1 * num2;
-}
-```
-
-Surely the same thing will happen when we run the below code...
-
-```js
-multiply( 3, 5 );
-function multiply( num1, num2 ) {               // NOTE: This is a function declaration
-  return num1 * num2;
-}
-```
-> We can successfully call the square function before declaring it. When our script file loads, it essentially processes all function declarations first, and then runs the rest of our Javascript from top to bottom.
-
-Knowing this, what will happen each time we call `express` and `declare` in the below example?
-
-```js
-express();        // What happens when we run this function at this point in the code?
-declare();        // What about now?        
-
-var express = function() {
-    console.log('Function expression called.');
-};
-
-express();        // ???
-declare();        // ???
-
-function declare() {
-    console.log('Function declaration called.');
-}
-```
-
-This is a neat feature, but can you think of a potential pitfall of "hoisting" too often?
-* Code organization and readability.
-
-## Methods (15 / 125)
+## Methods (15 / 140)
 
 Methods are functions that are attached to some object.
 
@@ -343,6 +404,10 @@ var car = {
   // Methods can take arguments
   gps: function( location ){
     console.log( "Beep boop, driving to " + location );
+  },
+  paint: function( newColor ){
+    console.log( "Your car has been painted " + newColor );
+    car.color = newColor;
   }
 }
 
@@ -357,14 +422,24 @@ With methods as part of our Javascript toolbox, we now have a cool interface wit
 
 We've only scratched the surface for objects. We're going to dive much deeper into them later on in the course.
 
-## Exercise + Homework: Calculator (15 / 140)
+> If you're looking for a sneak peak into the power of objects and functions, we recommend reading [The Secret Life of JS Objects](http://eloquentjavascript.net/06_object.html) chapter in Eloquent JS
+
+## Closing, Q&A, Review LO's (10 / 150)
+
+1. Does a function need an input, output, and side-effect to work?
+2. What's difference between calling and referencing a function?
+3. What's difference between function expressions and declarations?
+4. How are objects like dictionaries?
+5. What's difference between a property and a method?
+
+## Homework: Calculator
 
 [Javascript Calculator](https://github.com/ga-dc/js-calculator)
 
-## Closing, Q&A (10 / 150)
-
----
-
-## Further Reading
+## Further Reading / Resources
 
 * [Javascript Scoping and Hoisting](http://www.adequatelygood.com/JavaScript-Scoping-and-Hoisting.html)
+* [The Secret Life of JS Objects](http://eloquentjavascript.net/06_object.html)
+* [Secrets of the Javascript Ninja](http://webandbeer.com.ar/wp-content/uploads/2014/11/SecretsOfTheJavaScriptNinja.pdf)
+* [JS for Cats](http://jsforcats.com/)
+* [CoderByte Challenges](https://coderbyte.com/challenges/)
