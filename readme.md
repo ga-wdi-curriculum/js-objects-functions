@@ -190,26 +190,26 @@ What is alerted in each case? Write down your answer before running the code.
 1.
 ```js
 function foo(){
-    function bar() {
-        return 3;
-
-    return bar();
-    function bar() {
-        return 8;
-    }
+  function bar() {
+      return 3;
+  }
+  return bar();
+  function bar() {
+      return 8;
+  }
 }
 alert(foo());
 ```
 2.
 ```js
 function foo(){
-    var bar = function() {
-        return 3;
-    };
-    return bar();
-    var bar = function() {
-        return 8;
-    };
+  var bar = function() {
+      return 3;
+  };
+  return bar();
+  var bar = function() {
+      return 8;
+  };
 }
 alert(foo());
 ```
@@ -217,13 +217,13 @@ alert(foo());
 3.
 ```js
 function foo(){
-    return bar();
-    var bar = function() {
-        return 3;
-    };
-    var bar = function() {
-        return 8;
-    };
+  return bar();
+  var bar = function() {
+      return 3;
+  };
+  var bar = function() {
+      return 8;
+  };
 }
 alert(foo());
 ```
