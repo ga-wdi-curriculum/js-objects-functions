@@ -13,7 +13,7 @@
 - Define hoisting.
 
 ### Objects
-- Compare objects and key-value stores to arrays as data structures.
+- Explain how objects are defined as data structures
 - Create objects using object literal syntax.
 - Practice interacting with properties of literal objects.
 - Explain nested data structures.
@@ -180,6 +180,8 @@ function declare() {
 **Q. This is a neat feature, but can you think of a potential pitfall of "hoisting" too often?**
 
 * Code organization and readability.
+
+> You could argue that Function Declarations are forgiving – if you try to use a function before it is declared, hoisting fixes the order and the function gets called without mishap. But that kind of forgiveness does not encourage tight coding and in the long run is probably more likely to promote surprises than prevent them. After all, programmers arrange their statements in a particular sequence for a reason.
 
 ## Exercise: Fun with Functions Quiz (5 / 45)
 
