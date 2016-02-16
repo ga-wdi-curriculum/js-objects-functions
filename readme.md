@@ -20,7 +20,7 @@
 - Explain the difference between object properties and methods.
 - Write an object method.
 
-### Framing (15 / 15)
+### Framing (10 / 10)
 **What have you learned so far in Javascript?**
 
 * Data Types
@@ -47,7 +47,7 @@ Benefits of functions
 * DRYness.
 * Naming convention (describes intent).
 
-### Recognize the parts (10 / 25)
+### Recognize the parts (10 / 20)
 
 **What are the components of a function?**
 
@@ -97,7 +97,7 @@ multiply( 2, 5 );
 multiply;
 ```
 
-### Function Declarations and Expressions (10 / 35)
+### Function Declarations and Expressions (10 / 30)
 
 There are two ways to define or declare a function...
 
@@ -132,7 +132,7 @@ While we call/reference functions defined through declarations and expressions t
 > **Note**: Declarations are processed before any code is executed, meaning you can call functions before they are declared. This behavior is known as **hoisting**.
 
 
-### Hoisting (10 / 45)
+### Hoisting (10 / 40
 
 What do you think will happen when we run the below code...
 ```js
@@ -156,8 +156,15 @@ Knowing this, what will happen each time we call `express` and `declare` in the 
 
 ```js
 express();        // What happens when we run this function at this point in the code?
-declare();        // What about now?        
 
+var express = function() {
+    console.log('Function expression called.');
+};
+```
+
+What changes when we run?
+
+```js
 var express = function() {
     console.log('Function expression called.');
 };
@@ -173,6 +180,51 @@ function declare() {
 **Q. This is a neat feature, but can you think of a potential pitfall of "hoisting" too often?**
 
 * Code organization and readability.
+
+## Exercise: Fun with Functions Quiz ( 5 / 45 )
+
+What is alerted in each case? Write down your answer before running the code.
+
+1.
+```js
+function foo(){
+    function bar() {
+        return 3;
+
+    return bar();
+    function bar() {
+        return 8;
+    }
+}
+alert(foo());
+```
+2.
+```js
+function foo(){
+    var bar = function() {
+        return 3;
+    };
+    return bar();
+    var bar = function() {
+        return 8;
+    };
+}
+alert(foo());
+```
+
+3.
+```js
+function foo(){
+    return bar();
+    var bar = function() {
+        return 3;
+    };
+    var bar = function() {
+        return 8;
+    };
+}
+alert(foo());
+```
 
 **Hungry for More?**
 
@@ -380,7 +432,7 @@ We've only scratched the surface for objects. We're going to dive much deeper in
 4. How are objects like dictionaries?
 5. What's difference between a property and a method?
 
-##Homework: Calculator
+## Homework: Calculator
 
 [Javascript Calculator](https://github.com/ga-dc/js-calculator)
 
