@@ -426,6 +426,10 @@ We've only scratched the surface for objects. We're going to dive much deeper in
 
 > If you're looking for a sneak peak into the power of objects and functions, we recommend reading [The Secret Life of JS Objects](http://eloquentjavascript.net/06_object.html) chapter in Eloquent JS
 
+## You do: Calculator
+
+[Javascript Calculator](https://github.com/ga-dc/js-calculator)
+
 ## Closing, Q&A, Review LO's (10 / 150)
 
 1. Does a function need an input, output, and side-effect to work?
@@ -434,9 +438,7 @@ We've only scratched the surface for objects. We're going to dive much deeper in
 4. How are objects like dictionaries?
 5. What's difference between a property and a method?
 
-## Homework: Calculator
 
-[Javascript Calculator](https://github.com/ga-dc/js-calculator)
 
 ## Further Reading / Resources
 
