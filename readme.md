@@ -20,12 +20,14 @@
 - Explain the difference between object properties and methods.
 - Write an object method.
 
-### Framing (10 / 10)
+## Framing (10 / 10)
 **What have you learned so far in Javascript?**
 
 * Data Types
 * Conditionals
 * Data Collections
+
+We've learned a lot of things that are fundamental to programming. We now need a way to encapsulate logic we've created. Enter Functions.
 
 ## Functions
 
@@ -95,6 +97,31 @@ multiply( 2, 5 );
 
 // What happens if we reference the function without parentheses?
 multiply;
+```
+
+### You do - Create a function!
+It would be really nice if there was a function that did exponents for us. Create a square function, it should:
+
+- Take an argument that is a number
+- the function's output should return the number squared
+
+It should look something like this:
+
+```js
+square(4)
+=> 16
+```
+
+#### Bonus- Create an exponents function
+- it should take 2 arguments
+  - the first should be the base number
+  - the second should be the power you'd like to raise the base number to.
+
+It should look something like this:
+
+```js
+raisePower(4, 3)
+=> 64
 ```
 
 ### Function Declarations and Expressions (10 / 30)
@@ -235,8 +262,11 @@ alert(foo());
 ## Break (10 / 55)
 
 ## Intro to Objects (5 / 60)
+Before we start to talk about objects, let's visit a site some of you may be familiar with, [amazon](www.amazon.com). If we type in some random thing to search for you'll notice all the results have similar properties. Things like, price, title, reviews, amazon primeable?, picture.
 
-In JavaScript, Objects are arbitrary collections of properties; we can add or remove these properties as we please. One way to create an object is by using a curly brace notation.
+Turns out, in programming, we need a way to encapsulate logic about things in the real world to things in our programs. In javascript, these things are objects.
+
+In JavaScript, Objects are collections of properties(key-value pairs); we can add or remove these properties as we please. One way to create an object is by using a curly brace notation.
 
 ```js
 var car = {
@@ -249,6 +279,8 @@ var car = {
 Objects are a complex data type - usually referred to as an *unordered* list (or dictionary/hash/map).
 * They are a collection of key-value pairs called properties.
 * The keys which we explicitly state when defining a property are analogous to our array indexes. They are how we access the associated value (more below).
+
+> In the above example the variable `car` points to an object literal. This particular object has 3 properties: `make`, `model` and `year`
 
 ### Turn and Jot: Model WDI Student (5 / 65)
 
