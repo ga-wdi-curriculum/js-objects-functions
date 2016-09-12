@@ -1,26 +1,38 @@
 ## Functions
 
-**What’s a function?**
+<details>
+<summary>**What’s a function?**</summary>
 
 * Fundamental component of Javascript.
 * A reusable block of Javascript code.
 * Simply put, a function is a block of code that takes an input, processes that input and then produces an output.
 * Analogy: Quizno's Oven
 
-**Q. Think back to what we have covered so far, when have you used functions before?**
+</details>
 
-### Why do we use functions?
+---
+**Q. Think back to what we have covered so far, when have you used functions before?**
 
 > Say we wanted the product of two numbers? How would we do that with a function?
 
-Benefits of functions
+---
+
+<details>
+<summary>**Why do we use functions?**</summary>
+Benefits of functions:
 * Reusability.
 * DRYness.
 * Naming convention (describes intent).
 
+</details>
+
+---
+
 ### Recognize the parts (10 / 20)
 
-**What are the components of a function?**
+**Q. What are the components of a function?**
+
+---
 
 #### Function Container
 
@@ -50,6 +62,7 @@ function multiply( num1, num2 ){
 * Side Effects: e.g., print statements.
 
 **Q**. Does a function need an input, output and/or side effects to work?
+
 ---
 
 > A. Short answer. No.  Note: There is always an output (undefined). Discuss.
@@ -69,7 +82,7 @@ multiply;
 ```
 
 ### You do - Create a function!
-It would be really nice if there was a function that did exponents for us. Create a square function, it should:
+It would be really nice if there was a function that did exponents for us. Create a `square` function, it should:
 
 - Take an argument that is a number
 - the function's output should return the number squared
@@ -117,7 +130,9 @@ var multiply = function ( num1, num2 ) {
 
 Both do the same thing and run the same chunk of code. But they are different.
 
-- **Q. What differences do you notice?**
+**Q. What differences do you notice?**
+
+---
 
 **Function declarations** define functions without assigning them to variables.
 
@@ -126,7 +141,6 @@ Both do the same thing and run the same chunk of code. But they are different.
 While we call/reference functions defined through declarations and expressions the same way, they do have a subtle but important difference...
 
 > **Note**: Declarations are processed before any code is executed, meaning you can call functions before they are declared. This behavior is known as **hoisting**.
-
 
 ### Hoisting (10 / 40)
 

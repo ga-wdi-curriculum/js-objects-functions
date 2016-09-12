@@ -150,15 +150,6 @@ var car = {
 
 ### Break (10 / 110)
 
-### You Do: Big Ol' Twitter Object (15 / 125)
-
-As this course continues you will encounter plenty of Javascript objects in the wild. Spend **10 minutes** on the following...
-* Follow the link below and answer the questions in bold.
-* Along with each answer, write down how we would access the property in question.
-* Let's do the first one together...
-
-[Twitter JSON Exercise](https://github.com/ga-dc/big_ole_twitter_object)
-
 ## Methods (15 / 140)
 
 Methods are functions that are attached to some object.
@@ -195,3 +186,13 @@ With methods as part of our Javascript toolbox, we now have a cool interface wit
 We've only scratched the surface for objects. We're going to dive much deeper into them later on in the course.
 
 > If you're looking for a sneak peak into the power of objects and functions, we recommend reading [The Secret Life of JS Objects](http://eloquentjavascript.net/06_object.html) chapter in Eloquent JS
+
+### Bonus 
+### You Do: Big Ol' Twitter Object (15 / 125)
+
+As this course continues you will encounter plenty of Javascript objects in the wild. Spend **10 minutes** on the following...
+* Follow the link below and answer the questions in bold.
+* Along with each answer, write down how we would access the property in question.
+* Let's do the first one together...
+
+[Twitter JSON Exercise](https://github.com/ga-dc/big_ole_twitter_object)
