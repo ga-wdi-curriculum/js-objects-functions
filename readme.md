@@ -5,6 +5,7 @@
 ## Learning Objectives
 
 ### Functions
+- hello
 - Describe what a JavaScript function is.
 - Recognize the parts of a function.
 - Write a function in JavaScript using a declaration and an expression.
