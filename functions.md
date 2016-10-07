@@ -240,4 +240,4 @@ alert(foo());
 
 **Hungry for More?**
 
-> Grab a Snickers || Try implementing [fizzBuzz](https://github.com/ga-wdi-exercises/fizzBuzz_redux) in the console with Functions!
+> Grab a Snickers || Try implementing [fizzBuzz](https://github.com/ga-wdi-exercises/fizzBuzz_redux) with Functions!
