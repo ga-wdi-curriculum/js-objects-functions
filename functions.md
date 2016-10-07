@@ -6,7 +6,7 @@
 * Fundamental component of Javascript.
 * A reusable block of Javascript code.
 * Simply put, a function is a block of code that takes an input, processes that input and then produces an output.
-* Analogy: Quizno's Oven
+* Analogy: Pizza Hut  Oven
 
 </details>
 
@@ -160,7 +160,7 @@ function multiply( num1, num2 ) {               // NOTE: This is a function decl
   return num1 * num2;
 }
 ```
-> We can successfully call the multiply function before declaring it. When our script file loads, it essentially processes all function declarations first, and then runs the rest of our Javascript from top to bottom.
+> We can successfully call the multiply function before declaring it. When our script file loads, it (the browser) essentially processes all function declarations first, and then runs the rest of our Javascript from top to bottom.
 
 Knowing this, what will happen each time we call `express` and `declare` in the below example?
 
