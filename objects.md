@@ -1,6 +1,7 @@
 ## Intro to Objects (5 / 60)
 
-Before we start to talk about objects, let's visit a site some of you may be familiar with, [amazon](www.amazon.com). If we type in some random thing to search for you'll notice all the results have similar properties. Things like, price, title, reviews, amazon primeable?, picture.
+Before we start to talk about objects, let's visit a site some of you may be familiar with,
+[amazon](https://www.amazon.com). If we type in some random thing to search for you'll notice all the results have similar properties. Things like, price, title, reviews, amazon primeable?, picture.
 
 Turns out, in programming, we need a way to encapsulate logic about things in the real world to things in our programs. In javascript, these things are objects.
 
@@ -187,7 +188,7 @@ We've only scratched the surface for objects. We're going to dive much deeper in
 
 > If you're looking for a sneak peak into the power of objects and functions, we recommend reading [The Secret Life of JS Objects](http://eloquentjavascript.net/06_object.html) chapter in Eloquent JS
 
-### Bonus 
+### Bonus
 ### You Do: Big Ol' Twitter Object (15 / 125)
 
 As this course continues you will encounter plenty of Javascript objects in the wild. Spend **10 minutes** on the following...
