@@ -37,6 +37,7 @@ Benefits of functions:
 #### Function Container
 
 ```js
+//ES5
 function multiply(){
 
 }
@@ -45,6 +46,7 @@ function multiply(){
 #### Input ("Arguments" or "Parameters")
 
 ```js
+//ES5
 function multiply( num1, num2 ){
 
 }
@@ -53,6 +55,7 @@ function multiply( num1, num2 ){
 #### Output and Side Effects
 
 ```js
+//ES5
 function multiply( num1, num2 ){
   console.log( num1 * num2 );
   return num1 * num2;
@@ -65,7 +68,7 @@ function multiply( num1, num2 ){
 
 ---
 
-> A. Short answer. No.  Note: There is always an output (undefined). Discuss.
+> A. Short answer. No.  Note: There is always an output (undefined).
 
 #### Calling and Referencing a Function
 
@@ -192,6 +195,31 @@ function declare() {
 * Code organization and readability.
 
 > You could argue that Function Declarations are forgiving – if you try to use a function before it is declared, hoisting fixes the order and the function gets called without mishap. But that kind of forgiveness does not encourage tight coding and in the long run is probably more likely to promote surprises than prevent them. After all, programmers arrange their statements in a particular sequence for a reason.
+
+### ES6 Syntax (10 / 40)
+
+Let's get a glimpse of writing a function using ES6 syntax.
+```js
+var multiply = function( num1, num2 ){  // NOTE: This is a function expression
+  return num1 * num2;
+}
+
+multiply( 3, 5 );
+```
+
+What does this look like in ES6?
+```js
+const multiply = (num1, num2) => {
+  return num1 * num2;
+}
+```
+
+Or, to simplify it further..
+
+```js
+const multiply = (num1, num2) => num1 * num2;
+
+```
 
 ## Exercise: Fun with Functions Quiz (5 / 45)
 
