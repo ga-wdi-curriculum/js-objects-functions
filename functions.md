@@ -51,7 +51,7 @@ function multiply( num1, num2 ){
 
 **Q**. Does a function need an input, output and/or side effects to work?
 
-> A. Short answer. No. Not: if you don't specify an output, it will be undefined.
+> A. Short answer. No. Note: if you don't specify an output, it will be undefined.
 
 #### Calling and Referencing a Function
 
