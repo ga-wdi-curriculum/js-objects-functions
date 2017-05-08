@@ -10,7 +10,7 @@
 - Write a function in JavaScript using a declaration and an expression.
 - State the difference between a function's output and side effects.
 - Differentiate between referencing and invoking a function.
-- Define hoisting.
+- Define hoisting
 
 ### Objects
 - Explain how objects are defined as data structures
@@ -23,9 +23,9 @@
 ## Framing (10 / 10)
 **What have you learned so far in Javascript?**
 
-* Data Types
+* Primitive & Complex Data Types
 * Conditionals
-* Data Collections
+* Loops
 
 We've learned a lot of things that are fundamental to programming. We now need a way to encapsulate logic we've created. Enter Functions.
 

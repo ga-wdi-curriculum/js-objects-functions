@@ -1,43 +1,30 @@
 ## Functions
 
-<details>
-<summary>**What’s a function?**</summary>
+**What’s a Function?**
 
 * Fundamental component of Javascript.
 * A reusable block of Javascript code.
 * Simply put, a function is a block of code that takes an input, processes that input and then produces an output.
-* Analogy: Pizza Hut  Oven
-
-</details>
-
----
-**Q. Think back to what we have covered so far, when have you used functions before?**
-
-> Say we wanted the product of two numbers? How would we do that with a function?
 
 ---
 
-<details>
-<summary>**Why do we use functions?**</summary>
+**Why do we use functions?**
 Benefits of functions:
 * Reusability.
 * DRYness.
 * Naming convention (describes intent).
 
-</details>
-
 ---
 
 ### Recognize the parts (10 / 20)
 
-**Q. What are the components of a function?**
+**What are the components of a function?**
 
 ---
 
 #### Function Container
 
 ```js
-//ES5
 function multiply(){
 
 }
@@ -46,7 +33,6 @@ function multiply(){
 #### Input ("Arguments" or "Parameters")
 
 ```js
-//ES5
 function multiply( num1, num2 ){
 
 }
@@ -55,7 +41,6 @@ function multiply( num1, num2 ){
 #### Output and Side Effects
 
 ```js
-//ES5
 function multiply( num1, num2 ){
   console.log( num1 * num2 );
   return num1 * num2;
@@ -66,9 +51,7 @@ function multiply( num1, num2 ){
 
 **Q**. Does a function need an input, output and/or side effects to work?
 
----
-
-> A. Short answer. No.  Note: There is always an output (undefined).
+> A. Short answer. No. Not: if you don't specify an output, it will be undefined.
 
 #### Calling and Referencing a Function
 
@@ -84,11 +67,11 @@ multiply( 2, 5 );
 multiply;
 ```
 
-### You do - Create a function!
+### You do - Create a function (5 minutes)!
 It would be really nice if there was a function that did exponents for us. Create a `square` function, it should:
 
 - Take an argument that is a number
-- the function's output should return the number squared
+- The function's output should return the number squared
 
 It should look something like this:
 
