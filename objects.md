@@ -1,11 +1,11 @@
 ## Intro to Objects (5 / 60)
 
 Before we start to talk about objects, let's visit a site some of you may be familiar with,
-[amazon](https://www.amazon.com). If we type in some random thing to search for you'll notice all the results have similar properties. Things like, price, title, reviews, amazon primeable?, picture.
+[Amazon](https://www.amazon.com). If we type in some random thing to search for you'll notice all the results have similar properties. Things like, price, title, reviews, amazon primeable? and picture.
 
-Turns out, in programming, we need a way to encapsulate logic about things in the real world to things in our programs. In javascript, these things are objects.
+Turns out, in programming, we need a way to encapsulate logic about things in the real world to things in our programs. In Javascript, these things are objects.
 
-In JavaScript, Objects are collections of properties(key-value pairs); we can add or remove these properties as we please. One way to create an object is by using a curly brace notation.
+In JavaScript, objects are collections of properties(key-value pairs). We can add or remove these properties as we please. One way to create an object is by using a curly brace notation.
 
 ```js
 var car = {
@@ -19,7 +19,7 @@ Objects are a complex data type - usually referred to as an *unordered* list (or
 * They are a collection of key-value pairs called properties.
 * The keys which we explicitly state when defining a property are analogous to our array indexes. They are how we access the associated value (more below).
 
-> In the above example the variable `car` points to an object literal. This particular object has 3 properties: `make`, `model` and `year`
+> In the above example, the variable `car` points to an object literal. This particular object has 3 properties: `make`, `model` and `year`.
 
 ### Turn and Jot: Model WDI Student (5 / 65)
 
